@@ -1,0 +1,10 @@
+{
+  "name": "aliyun-saml-role-sso",
+  "scripts": {
+    "pages-create": "wrangler pages project create aliyun-saml-role-sso",
+    "pages-publish": "wrangler pages publish src --project-name aliyun-saml-role-sso --branch production"
+  },
+  "devDependencies": {
+    "wrangler": "^2.8.1"
+  }
+}
