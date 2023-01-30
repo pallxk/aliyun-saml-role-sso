@@ -7,9 +7,15 @@
 
 <body>
   <h1>Aliyun SAML Role SSO</h1>
-  <form action="https://signin.aliyun.com/saml-role/sso" method="post">
-    SAMLResponse: <input name="SAMLResponse" value="">
+  <form id="SAMLForm" action="https://signin.aliyun.com/saml-role/sso" method="post">
+    SAMLResponse: <input id="SAMLResponse" name="SAMLResponse" value="">
     <input type="submit">
   </form>
+  <script>
+    if (location.hash.length > 1) {
+      SAMLResponse.value = location.hash.substring(1);
+      SAMLForm.submit();
+    }
+  </script>
 </body>
 </html>
